@@ -1,12 +1,14 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { useRouter } from 'next/router'
+
+import { fontSerif } from '../util/config'
 
 const Document = () => {
-  const { locale } = useRouter()
-
   return (
     <Html>
-      <Head lang={locale} />
+      <Head>
+        <link href={fontSerif} rel={'stylesheet'} />
+      </Head>
+
       <body>
         <Main />
         <NextScript />
